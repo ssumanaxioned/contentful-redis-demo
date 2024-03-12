@@ -1,0 +1,9 @@
+node_modules/
+.cache/
+public
+# dotenv environment variable files
+.env.development
+.env.production
+.env.development.DEV
+.env.production.DEV
+.scannerwork

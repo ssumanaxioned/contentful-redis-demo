@@ -1,0 +1,17 @@
+{
+  "name": "contentful-redis-demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Suman",
+  "license": "ISC",
+  "dependencies": {
+    "contentful": "^10.8.1",
+    "contentful-redis": "^1.0.0",
+    "redis": "^4.6.13",
+    "redis-contentful": "^2.2.5"
+  }
+}
