@@ -2,6 +2,7 @@ node_modules/
 .cache/
 public
 # dotenv environment variable files
+.env
 .env.development
 .env.production
 .env.development.DEV
