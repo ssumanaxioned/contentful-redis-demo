@@ -1,17 +1,19 @@
+require('dotenv').config();
+
 const RedisContentful = require('redis-contentful');
 
 const client = new RedisContentful({
   redis: {
     database: 0, // Optional param, default - 0
-    host: '127.0.0.1', // Optional param, default - 127.0.0.1
-    port: '6379', // Optional param, default - 6379
+    host: process.env.REDIS_HOST, // Optional param, default - 127.0.0.1
+    port: process.env.REDIS_PORT, // Optional param, default - 6379
   },
   contentful: {
-    space: 'h4tt3y7ev6pr',
+    space: process.env.CONTENTFUL_SPACE,
     // accessToken: 'WcQGwDb3sYIZolBhCRVzRzBHsId5pKqYkOx2R-j2d2M',
-    accessToken: 'Ix7gmGoXOEA8FO7MFf6RKK_FDnAsJ-jGvX79Kq4hYIk',
+    accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
     locale: 'en-US', // Optional param, default - en-US
-    environment: 'master', // contentful environment, default is master
+    environment: process.env.CONTENTFUL_ENVIRONMENT    , // contentful environment, default is master
     identifier: 'content-type', // Optional param, default - sys.id
   },
 });
